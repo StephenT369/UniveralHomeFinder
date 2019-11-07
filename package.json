@@ -28,6 +28,7 @@
     "heroku": "^7.33.3",
     "moment": "^2.24.0",
     "mysql": "^2.17.1",
+    "node-zillow": "^2.0.0",
     "nodemon": "^1.19.4",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
