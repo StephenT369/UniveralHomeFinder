@@ -10,3 +10,6 @@ Universal Home Finder is the goto App for finding the home of your dreams.  This
 
 - Stephen Thompson
     Backend database and data model/structure and design, jQuery, React, server Ops.
+
+## UI/UX layout
+<img src="./public/assets/images/ui_ux.png"/>
