@@ -3,10 +3,10 @@ Universal Home Finder is the goto App for finding the home of your dreams.  This
 
 ## Member Roles
 - Mike Dawn
-    UI/UX design and layout
+    UI/UX design and layout.
 
 - Jermaine Lewis
-    UI/UX design and layout; backend development jQuery
+    UI/UX design and layout; backend development jQuery.
 
 - Stephen Thompson
-    Backend database and data model/structure and design, jQuery, server Ops.
+    Backend database and data model/structure and design, jQuery, React, server Ops.
