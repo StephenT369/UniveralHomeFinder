@@ -10,16 +10,36 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "watch": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^4.1.0",
-    "nodemon": "^1.18.7"
+    "nodemon": "^1.19.4"
   },
   "dependencies": {
+    "axios": "^0.19.0",
+    "bcrypt": "^3.0.6",
+    "dotenv": "^8.2.0",
     "express": "^4.16.3",
-    "if-env": "^1.0.4"
-  }
+    "heroku": "^7.35.0",
+    "if-env": "^1.0.4",
+    "moment": "^2.24.0",
+    "mysql": "^2.17.1",
+    "node-zillow": "^2.0.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "sequelize": "^5.21.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StephenT369/UniversalHomeFinder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/StephenT369/UniversalHomeFinder/issues"
+  },
+  "homepage": "https://github.com/StephenT369/UniversalHomeFinder#readme"
 }
