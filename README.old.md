@@ -1,2 +1,0 @@
-# UniveralHomeFinder
-Project 3
