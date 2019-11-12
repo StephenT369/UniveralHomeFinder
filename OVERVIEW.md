@@ -12,4 +12,4 @@ Universal Home Finder is the goto App for finding the home of your dreams.  This
     Backend database and data model/structure and design, jQuery, React, server Ops.
 
 ## UI/UX layout
-<img src="./public/assets/images/ui_ux.png"/>
+<img src="./client/public/build/media/ui_ux.png"/>
