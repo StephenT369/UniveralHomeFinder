@@ -1,0 +1,81 @@
+body,
+h1 {
+  font-family: "Raleway", sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.bgimg {
+  background-image: url("./bgimage.jpg");
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+#addQuestion {
+  /* background-color: #C5C9B8; */
+  width: 100%;
+  color: #333333;
+  height: 450px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  float: none;
+}
+
+.topleftimg {
+  position: absolute;
+  bottom: 15px;
+  left: 16px;
+  font-size: 18px;
+}
+
+#button {
+  margin-right: 0.5em;
+}
+
+.subBtn{
+  background-color: #4CAF50;
+}
+/* side bar */
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 220px;
+    background-color: white;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+
+button:focus {
+  outline: 0;
+}
+
+/* .navbar .dropdown-menu .form-control {
+    /* width: 30px; */
+/* 
+    position: absolute;
+    top: 15px;
+    right: 16px;
+    
+} */
+
+.signIn {
+    top: 0;
+    position: absolute;
+    right: 30px;
+  
+}
