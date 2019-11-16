@@ -1,17 +1,19 @@
 import React from "react";
 import "./Search.css";
-import zillowLogo from './Zillowlogo.gif'
-
+import zillowLogo from "./Zillowlogo.gif";
 
 function Search() {
   return (
     // <!-- sidebar -->
     <>
       <div className="sidebar">
-        <a className="active" href="blankHtml.html">home</a>
-        <a href="https://gisit.tarrantcounty.com/cmportal/">Check Crime in your area.</a>
-        
-      
+        <a className="active" href="client\src\Uhflogo.png">
+          
+        </a>
+
+        <a href="https://gisit.tarrantcounty.com/cmportal/">
+          Check Crime in your area.
+        </a>
 
         <a className="intPro" href="https://broadbandnow.com/Texas">
           Search for Internet Provider.
@@ -223,7 +225,7 @@ function Search() {
         </div>
 
         <div className="topleftimg">
-          <img src={zillowLogo} alt="logo"/>
+          <img src={zillowLogo} alt="logo" />
         </div>
         <div className="signIn">
           <li className="dropdown order-1">
@@ -272,7 +274,7 @@ function Search() {
                       </a>
                     </small>
                     <small>
-                      <a className="regLink" href="registration.html">
+                      <a className="regLink" href="client\src\Reg.js">
                         Register here!
                       </a>
                     </small>
@@ -283,15 +285,7 @@ function Search() {
           </li>
         </div>
       </div>
-
-     
-  
-
     </>
-
-
-
-
   );
 }
 

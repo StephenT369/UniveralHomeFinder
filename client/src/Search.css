@@ -1,3 +1,7 @@
+body{
+  background-image: url("./bgimage3.jpg");
+  background-size: cover;
+}
 body,
 h1 {
   font-family: "Raleway", sans-serif;
@@ -13,10 +17,15 @@ html {
 }
 
 .bgimg {
-  background-image: url("./bgimage.jpg");
-  min-height: 100%;
-  background-position: center;
-  background-size: cover;
+  
+ 
+  /* Full heigt */
+  /* min-height: 100%;  */
+
+  /* Center and scale the image nicely */
+  /* background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
 
 #addQuestion {
@@ -50,10 +59,20 @@ html {
 /* side bar */
 
 .sidebar {
-    margin: 0;
-    padding: 0;
+
+  padding: 10;
+    font-size: 150%;
+    
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    vertical-align: baseline;
+
+    /* margin: 0;
+    padding: 0; */
     width: 220px;
-    background-color: white;
+    background: rgba(0, 151, 19, 0.2);
+
     position: fixed;
     height: 100%;
     overflow: auto;
