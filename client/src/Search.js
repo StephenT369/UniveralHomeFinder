@@ -6,6 +6,26 @@ function Search() {
   return (
     // <!-- sidebar -->
     <>
+
+<div className="sidebar">
+
+
+<br></br>
+  <a  id="sidebar-menu" href="https://broadbandnow.com/Texas">Internet Providers</a>
+  <br></br>
+  <a id="sidebar-menu"  href="https://gisit.tarrantcounty.com/cmportal/">Crime</a>
+  <br></br>
+  <a id="sidebar-menu"  href="https://www.niche.com/k12/search/best-school-districts/m/dallas-fort-worth-metro-area/">School Districts</a>
+  <br></br>
+  
+  
+</div>
+
+{/* <!-- Page content --> */}
+{/* <div class="main">
+  ...
+</div>
+
       <div className="sidebar">
         <a className="active" href="client\src\Uhflogo.png">
           
@@ -18,7 +38,7 @@ function Search() {
         <a className="intPro" href="https://broadbandnow.com/Texas">
           Search for Internet Provider.
         </a>
-      </div>
+      </div> */}
 
       <div
         id="modalPassword"
