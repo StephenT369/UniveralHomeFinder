@@ -114,3 +114,9 @@ button:focus {
 #sidebar-menu{
   color:white;
 }
+
+#sidebar-heading{
+  color: rgb(58, 167, 58);
+  font-size: 30px;
+
+}

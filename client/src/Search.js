@@ -8,7 +8,7 @@ function Search() {
     <>
 
 <div className="sidebar">
-
+<a  id="sidebar-heading" href="blank.html">Information</a>
 
 <br></br>
   <a  id="sidebar-menu" href="https://broadbandnow.com/Texas">Internet Providers</a>
@@ -83,10 +83,10 @@ function Search() {
                 className="form-control mr-sm-2"
                 type="Search"
                 placeholder="Zip Code"
-                aria-label="Serch"
+                aria-label="Search"
               />
               <button
-                className="btn btn-outline-success my-2 my-sm-0"
+                className="btn btn-outline-danger my-2 my-sm-0"
                 type="submit"
               >
                 Search
