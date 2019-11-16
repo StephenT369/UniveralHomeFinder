@@ -1,18 +1,6 @@
 import React from "react";
-import {
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBCard,
-  MDBCardBody,
-  MDBModalFooter,
-  MDBIcon,
-  MDBCardHeader,
-  MDBBtn,
-  MDBInput
-} from "mdbreact";
-
-const FormPage = () => {
+i
+const List = () => {
   return (
     <MDBContainer>
       <MDBRow>
@@ -68,4 +56,4 @@ const FormPage = () => {
   );
 };
 
-export default FormPage;
+export default List;

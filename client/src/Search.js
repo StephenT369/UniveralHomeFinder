@@ -61,9 +61,9 @@ function Search() {
             <form className="form-inline">
               <input
                 className="form-control mr-sm-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
+                type="Search"
+                placeholder="Zip Code"
+                aria-label="Serch"
               />
               <button
                 className="btn btn-outline-success my-2 my-sm-0"
@@ -88,16 +88,16 @@ function Search() {
                   $100K - $150K
                 </a>
                 <a className="dropdown-item" href="blankHtml.html">
-                  $150K - $250K
+                  $151K - $250K
                 </a>
                 <a className="dropdown-item" href="blankHtml.html">
-                  $250K - $3500K
+                  $251K - $3500K
                 </a>
                 <a className="dropdown-item" href="blankHtml.html">
-                  $350K - $450K
+                  $351K - $450K
                 </a>
                 <a className="dropdown-item" href="blankHtml.html">
-                  $450K - $550K
+                  $451K - $550K
                 </a>
                 <div className="dropdown-divider"></div>
               </div>
@@ -114,19 +114,19 @@ function Search() {
               </button>
               <div className="dropdown-menu">
                 <a className="dropdown-item" href="blankHtml.html">
-                  Dallas County
+                  $500-1000
                 </a>
                 <a className="dropdown-item" href="blankHtml.html">
-                  Tarrant County
+                $1001-2000
                 </a>
                 <a className="dropdown-item" href="blankHtml.html">
-                  Denton County
+                $2001-3000
                 </a>
                 <a className="dropdown-item" href="blankHtml.html">
-                  Collin County
+                $3001-4000
                 </a>
                 <a className="dropdown-item" href="blankHtml.html">
-                  Rockwall County
+                $4001-5000
                 </a>
                 <div className="dropdown-divider"></div>
               </div>
@@ -154,9 +154,7 @@ function Search() {
                 <a className="dropdown-item" href="blankHtml.html">
                   Townhomes
                 </a>
-                <a className="dropdown-item" href="blankHtml.html">
-                  Condos/co-ops
-                </a>
+                
                 <div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="blankHtml.html">
                   Done
@@ -184,11 +182,9 @@ function Search() {
                   3
                 </a>
                 <a className="dropdown-item" href="blankHtml.html">
-                  4
-                </a>
-                <a className="dropdown-item" href="blankHtml.html">
                   4+
                 </a>
+               
                 <div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="blankHtml.html">
                   Done
@@ -209,16 +205,7 @@ function Search() {
                 <a className="dropdown-item" href="blankHtml.html">
                   Action
                 </a>
-                <a className="dropdown-item" href="blankHtml.html">
-                  Another action
-                </a>
-                <a className="dropdown-item" href="blankHtml.html">
-                  Something else here
-                </a>
-                <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="blankHtml.html">
-                  Separated link
-                </a>
+              
               </div>
             </div>
           </nav>
