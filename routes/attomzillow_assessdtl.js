@@ -39,9 +39,12 @@ axios.default
   .then(function(response) {
     var data = response.data.property;
     var address = [];
-    var city = [];
-    var state = [];
-    for (i = 0; i < data.length; i++) {
+    var locality = [];
+    var countrySubd = [];
+    var postal1 = [];
+    var taxamt = [];
+
+    for (let i = 0; i < data.length; i++) {
       address.push(data[i].address.line1);
     }
     return address;
@@ -57,12 +60,11 @@ axios.default
     console.log(error.config);
   })
   .then(async address => {
-    for (i = 0; i < address.length; i++) {
+    for (let i = 0; i < address.length; i++) {
       var parms = {
         address: address[i],
         citystatezip: postalCode
       };
-
       const zillowData = await getZillowData(parms, address[i]);
     }
   });
@@ -72,8 +74,10 @@ function getZillowData(parms, address) {
     .get("GetDeepSearchResults", parms, address)
     .then(function(results) {
       var zpid = results.response.results.result[0].zpid;
-
-      return zpid;
+      var estVal = results.response.results.result[0].zestimate[0].amount[0]._;
+      console.log(estVal)
+      
+      return zpid, estVal;
     })
     .then(function(zpid) {
       zApi
@@ -81,8 +85,19 @@ function getZillowData(parms, address) {
         .then(function(results) {
           var images = results.response.images.image[0].url;
           console.log("\n\n----PROPERTY----");
-          console.log(address);
-          console.log(results.response.homeDescription);
+          //console.log(address);
+          console.log('****Address****')
+          console.log(results.response.address.street[0]);
+          console.log(results.response.address.city[0]);
+          console.log(results.response.address.state[0]);
+          console.log(results.response.address.zipcode[0]+'\n\n');
+          console.log('****Details****')
+          console.log('year Built: '+results.response.editedFacts.yearBuilt[0] );
+          console.log('living sqft: '+results.response.editedFacts.finishedSqFt[0] );
+          console.log('lot sqft: '+results.response.editedFacts.lotSizeSqFt[0] );
+          console.log('bedrooms: '+results.response.editedFacts.bedrooms[0]);
+          console.log('bathrooms: '+results.response.editedFacts.bathrooms[0]);
+          console.log('description:\n' + results.response.homeDescription);
           console.log(images);
           //loop through image array if we need it.
           /*for (let i = 0; i < images[i].length; i++) {
@@ -90,6 +105,8 @@ function getZillowData(parms, address) {
           };*/
           console.log(results.response.links);
           console.log("----PROPERTY----");
+          /*console.log("****ZILLOW WHOLE RESPONSE****");
+          console.log(results)*/
           return results.response;
         });
     });
