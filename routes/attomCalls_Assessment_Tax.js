@@ -1,6 +1,7 @@
+require("dotenv").config();
 var axios = require("axios");
-axios.default.defaults.headers.common['apikey'] = '4c0b6b2cba6a096ddb09064a579ab77e';
-axios.default.defaults.headers.common['Accept'] = 'application/json';
+axios.default.defaults.headers.common["apikey"] = process.env.apikey;
+axios.default.defaults.headers.common["Accept"] = process.env.Accept;
 
 var postalCode = 75205;
 var minTax = 1000;
@@ -17,7 +18,10 @@ axios.default.get(attomUrl).then(
         var data = response.data.property;
 
         for(i=0; i < data.length; i++){
+            /*console.log('----DATA----');
             console.log(data[i]);
+            console.log('----DATA----');*/
+            console.log(data[i].assessment.tax.taxamt);
         };
 
        //console.log(response);
