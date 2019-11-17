@@ -7,8 +7,8 @@ var zwsid = 'X1-ZWz1hghtx31b0r_47pen';
 var zApi = new Zillow(zwsid);
 
 var parms = {
-   /* zpid: 48749425/*,
-    address: '2114 Bigelow Ave',
+    zpid: 48749425,
+   /* address: '2114 Bigelow Ave',
     citystatezip: '98109'*/
 };
 
