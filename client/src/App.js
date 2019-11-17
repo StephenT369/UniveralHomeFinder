@@ -1,5 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Jumbotron } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 export default function App() {
   return (
@@ -62,7 +65,6 @@ export default function App() {
 }
 
 function Home() {
-  return <h2>Home</h2>;
 }
 
 function Registration() {
@@ -70,22 +72,68 @@ function Registration() {
 }
 
 function PropertyTax() {
+  return <Jumbotron>
+  <h1>Property Tax</h1>
+  <p>
+    This page is where you will search for Real Estate Based upon
+    property tax
+  </p>
+  <p>
+    <Button>Link</Button>
+  </p>
+</Jumbotron>;
   return <h2>PropertyTax</h2>;
 }
 
 function PropertyType() {
-  return <h2>PropertyType</h2>;
+  return <Jumbotron>
+  <h1>Property Type</h1>
+  <p>
+   This page is where you will search for Real Estate Based upon 
+   property type.
+  </p>
+  <p>
+    <Button>Link</Button>
+  </p>
+</Jumbotron>;
 }
 
 function Price() {
-  return <h2>Price</h2>;
+  return <Jumbotron>
+  <h1>Property Prioce</h1>
+  <p>
+   This page is where you will search for Real Estate Based upon
+   Property Price
+  </p>
+  <p>
+    <Button>Learn more</Button>
+  </p>
+</Jumbotron>;
 }
 
 function BestBuy() {
-  return <h2>BestBuy</h2>;
+  return <Jumbotron>
+  <h1>Best Buy</h1>
+  <p>
+  This page is where you will search for Real Estate Based upon
+  The best price
+  </p>
+  <p>
+    <Button>Learn more</Button>
+  </p>
+</Jumbotron>;
 }
 
 function Bed() {
-  return <h2>Bed</h2>;
+  return <Jumbotron>
+  <h1>Bedrooms</h1>
+  <p>
+  This page is where you will search for Real Estate Based upon
+  the number bedrooms
+  </p>
+  <p>
+    <Button>Learn more</Button>
+  </p>
+</Jumbotron>;
 }
 
