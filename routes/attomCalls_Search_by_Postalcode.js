@@ -4,24 +4,21 @@ axios.default.defaults.headers.common["apikey"] = process.env.apikey;
 axios.default.defaults.headers.common["Accept"] = process.env.Accept;
 
 var postalCode = 75205;
-var minTax = 1000;
-var maxTax = 3000;
-var pageSize = 12;
+var pageSize = 2;
 attomUrl = 
-"https://api.gateway.attomdata.com/propertyapi/v1.0.0/assessment/snapshot?"+
-"minTaxAmt="+ minTax +
-"&maxTaxAmt="+ maxTax +
-"&postalcode="+ postalCode;
+"https://api.gateway.attomdata.com/propertyapi/v1.0.0/property/address?"+
+"postalcode="+ postalCode +
+"&pagesize="+ pageSize;
 
 axios.default.get(attomUrl).then(
     function(response){
         var data = response.data.property;
 
         for(i=0; i < data.length; i++){
-            /*console.log('----DATA----');
-            console.log(data[i]);
-            console.log('----DATA----');*/
-            console.log(data[i].assessment.tax.taxamt);
+           console.log(data[i].address.line1);
+           console.log('----DATA----');
+           console.log(data);
+           console.log('----DATA----');
         };
 
        //console.log(response);
