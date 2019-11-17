@@ -1,0 +1,17 @@
+body {
+    background-image: url("./bgimage3.jpg");
+    background-size: cover;
+  }
+  body,
+  h1 {
+    font-family: "Raleway", sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  body,
+  html {
+    height: 100%;
+  }
