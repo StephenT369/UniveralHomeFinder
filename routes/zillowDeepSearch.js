@@ -8,8 +8,8 @@ var zApi = new Zillow(zwsid);
 
 var parms = {
     //zpid: 48749425,
-    address: '2114 Bigelow Ave',
-    citystatezip: '98109'
+   address: '2114 Bigelow Ave',
+   citystatezip: '98109'
 };
 
 zApi.get('GetDeepSearchResults', parms)
@@ -19,13 +19,16 @@ zApi.get('GetDeepSearchResults', parms)
 
    console.log('---GetDeepSearchResults---')
    console.log(results.response.results.result);
+   console.log('------DETAILS-----------')
+   console.log('zpid: ' + results.response.results.result[0].zpid);
    console.log(results.response.results.result[0].links);
    console.log(results.response.results.result[0].address);
-   console.log(results.response.results.result[0].lastSoldPrice);
-   console.log(results.response.results.result[0].zestimate);
+   //console.log(results.response.results.result[0].lastSoldPrice);
+   console.log('Est Market: ' + results.response.results.result[0].zestimate[0].amount[0]._);
    console.log(results.response.results.result[0].localRealEstate);
+   console.log(results.response.results.result[0].localRealEstate[0].region[0].links);
    console.log('---GetDeepSearchResults---')
-   //console.log(results.response.results);
+   console.log(results.response.results);
    
     //return results;
 });
