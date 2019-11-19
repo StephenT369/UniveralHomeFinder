@@ -9,11 +9,6 @@ import { Button } from 'react-bootstrap';
 import zillowLogo from "./Zillowlogo.gif";
 import queryString from 'query-string';
 
-class Zipcode extends Component {
-  state = {
-    postalcode: 0
-  }
-}
 
 export default function App() {
   return (
@@ -28,12 +23,6 @@ export default function App() {
             <Price />
           </Route>
           <Route exact path="/PropertyTax" component={PropertyTax} />
-          <Route path="/PropertyType">
-            <PropertyType />
-          </Route>
-          <Route path="/BestBuy">
-            <BestBuy />
-          </Route>
           <Route path="/Bed">
             <Bed />
           </Route>
@@ -69,18 +58,6 @@ function PropertyTax(props) {
 </Jumbotron>;
 }
 
-function PropertyType() {
-  return <Jumbotron>
-  <h1>Property Type</h1>
-  <p>
-   This page is where you will search for Real Estate Based upon 
-   property type.
-  </p>
-  <p>
-    <Button>Link</Button>
-  </p>
-</Jumbotron>;
-}
 
 function Price() {
   return <Jumbotron>
@@ -95,18 +72,6 @@ function Price() {
 </Jumbotron>;
 }
 
-function BestBuy() {
-  return <Jumbotron>
-  <h1>Best Buy</h1>
-  <p>
-  This page is where you will search for Real Estate Based upon
-  The best price
-  </p>
-  <p>
-    <Button>Learn more</Button>
-  </p>
-</Jumbotron>;
-}
 
 function Bed() {
   return <Jumbotron>

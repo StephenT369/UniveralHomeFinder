@@ -1,11 +1,13 @@
 import React, {useState} from "react";
 import "./Search.css";
 import zillowLogo from "./Zillowlogo.gif";
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+
 
 function Search() {
   const [zipCode, setZipCode] = useState(0)
   const [price, setPrice] = useState('');
+  
 
   function handleZipcode(event) {
     setZipCode(event.target.value);
@@ -19,7 +21,7 @@ function Search() {
     const price = event.target.innerText
     setPrice(price)
 
-    //API.get('/search?price=${price}&zipCode=${zipCode}')
+   // API.get(`/search?price=${price}&zipCode=${zipCode}`)
 
   }
 
@@ -105,6 +107,7 @@ function Search() {
                 placeholder="Zip Code"
                 aria-label="Search"
                 onChange={handleZipcode}
+                id="searchZipCode"
               />
             </form>
 
