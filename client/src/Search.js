@@ -1,8 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Search.css";
 import zillowLogo from "./Zillowlogo.gif";
+import {Link} from 'react-router-dom'
 
 function Search() {
+  const [zipCode, setZipCode] = useState(0)
+  const [price, setPrice] = useState('');
+
+  function handleZipcode(event) {
+    setZipCode(event.target.value);
+  }
+
+  function handlePropetyTax() {
+    // API.get('/search?params...')
+  }
+
+  function handlePrice(event) {
+    const price = event.target.innerText
+    setPrice(price)
+
+    //API.get('/search?price=${price}&zipCode=${zipCode}')
+
+  }
+
   return (
     // <!-- sidebar -->
     <>
@@ -11,11 +31,11 @@ function Search() {
 <a  id="sidebar-heading" href="blank.html">Information</a>
 
 <br></br>
-  <a  id="sidebar-menu" href="https://broadbandnow.com/Texas">Internet Providers</a>
+  <a target="_blank" id="sidebar-menu" href="https://broadbandnow.com/Texas">Internet Providers</a>
   <br></br>
-  <a id="sidebar-menu"  href="https://gisit.tarrantcounty.com/cmportal/">Crime</a>
+  <a target="_blank" id="sidebar-menu"  href="https://gisit.tarrantcounty.com/cmportal/">Crime</a>
   <br></br>
-  <a id="sidebar-menu"  href="https://www.niche.com/k12/search/best-school-districts/m/dallas-fort-worth-metro-area/">School Districts</a>
+  <a target="_blank" id="sidebar-menu"  href="https://www.niche.com/k12/search/best-school-districts/m/dallas-fort-worth-metro-area/">School Districts</a>
   <br></br>
   
   
@@ -84,18 +104,13 @@ function Search() {
                 type="Search"
                 placeholder="Zip Code"
                 aria-label="Search"
+                onChange={handleZipcode}
               />
-              <button
-                className="btn btn-outline-danger my-2 my-sm-0"
-                type="submit"
-              >
-                Search
-              </button>
             </form>
 
             <div className="btn-group">
               <button
-                type="button"
+                // type="button"
                 className="btn btn-danger dropdown-toggle"
                 data-toggle="dropdown"
                 aria-haspopup="true"
@@ -104,21 +119,22 @@ function Search() {
                 Price
               </button>
               <div className="dropdown-menu">
-                <a className="dropdown-item" href="blankHtml.html">
+
+                <Link className="dropdown-item" to="/Price" onClick={handlePrice}>
                   $100K - $150K
-                </a>
-                <a className="dropdown-item" href="blankHtml.html">
+                </Link>
+                <Link className="dropdown-item" to="/Price">
                   $151K - $250K
-                </a>
-                <a className="dropdown-item" href="blankHtml.html">
+                </Link>
+                <Link className="dropdown-item" to="/Price">
                   $251K - $3500K
-                </a>
-                <a className="dropdown-item" href="blankHtml.html">
+                </Link>
+                <Link className="dropdown-item" to="/Price">
                   $351K - $450K
-                </a>
-                <a className="dropdown-item" href="blankHtml.html">
+                </Link>
+                <Link className="dropdown-item" to="/Price">
                   $451K - $550K
-                </a>
+                </Link>
                 <div className="dropdown-divider"></div>
               </div>
             </div>
@@ -133,52 +149,22 @@ function Search() {
                 Property Tax
               </button>
               <div className="dropdown-menu">
-                <a className="dropdown-item" href="blankHtml.html">
+                <Link className="dropdown-item" to="/PropertyTax?minTaxAmt=500&maxTaxAmt=1000">
                   $500-1000
-                </a>
-                <a className="dropdown-item" href="blankHtml.html">
+                </Link>
+                <Link className="dropdown-item" to="/PropertyTax?minTaxAmt=1001&maxTaxAmt=2000">
                 $1001-2000
-                </a>
-                <a className="dropdown-item" href="blankHtml.html">
+                </Link>
+                <Link className="dropdown-item" to="/PropertyTax?minTaxAmt=2001&maxTaxAmt=3000">
                 $2001-3000
-                </a>
-                <a className="dropdown-item" href="blankHtml.html">
+                </Link>
+                <Link className="dropdown-item" to="/PropertyTax?minTaxAmt=3001&maxTaxAmt=4000">
                 $3001-4000
-                </a>
-                <a className="dropdown-item" href="blankHtml.html">
+                </Link>
+                <Link className="dropdown-item" to="/PropertyTax?minTaxAmt=4001&maxTaxAmt=5000">
                 $4001-5000
-                </a>
+                </Link>
                 <div className="dropdown-divider"></div>
-              </div>
-            </div>
-            <div className="btn-group">
-              <button
-                type="button"
-                className="btn btn-danger dropdown-toggle"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Property Type
-              </button>
-              <div className="dropdown-menu">
-                <a className="dropdown-item" href="blankHtml.html">
-                  Multi-Family
-                </a>
-                <a className="dropdown-item" href="blankHtml.html">
-                  Houses
-                </a>
-                <a className="dropdown-item" href="blankHtml.html">
-                  Condos/co-ops
-                </a>
-                <a className="dropdown-item" href="blankHtml.html">
-                  Townhomes
-                </a>
-                
-                <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="blankHtml.html">
-                  Done
-                </a>
               </div>
             </div>
             <div className="btn-group">
@@ -192,40 +178,18 @@ function Search() {
                 Bed
               </button>
               <div className="dropdown-menu">
-                <a className="dropdown-item" href="blankHtml.html">
+                <Link className="dropdown-item" to="/Bed">
                   1
-                </a>
-                <a className="dropdown-item" href="blankHtml.html">
+                </Link>
+                <Link className="dropdown-item" to="/Bed">
                   2
-                </a>
-                <a className="dropdown-item" href="blankHtml.html">
+                </Link>
+                <Link className="dropdown-item" to="/Bed">
                   3
-                </a>
-                <a className="dropdown-item" href="blankHtml.html">
+                </Link>
+                <Link className="dropdown-item" to="/Bed">
                   4+
-                </a>
-               
-                <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="blankHtml.html">
-                  Done
-                </a>
-              </div>
-            </div>
-            <div className="btn-group">
-              <button
-                type="button"
-                className="btn btn-danger dropdown-toggle"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Best Buy
-              </button>
-              <div className="dropdown-menu">
-                <a className="dropdown-item" href="blankHtml.html">
-                  Action
-                </a>
-              
+                </Link>
               </div>
             </div>
           </nav>
