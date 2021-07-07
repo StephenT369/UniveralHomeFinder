@@ -39,10 +39,6 @@ axios.default
   .then(function(response) {
     var data = response.data.property;
     var address = [];
-    var locality = [];
-    var countrySubd = [];
-    var postal1 = [];
-    var taxamt = [];
 
     for (let i = 0; i < data.length; i++) {
       address.push(data[i].address.line1);
@@ -74,10 +70,8 @@ function getZillowData(parms, address) {
     .get("GetDeepSearchResults", parms, address)
     .then(function(results) {
       var zpid = results.response.results.result[0].zpid;
-      var estVal = results.response.results.result[0].zestimate[0].amount[0]._;
-      console.log(estVal)
-      
-      return zpid, estVal;
+
+      return zpid;
     })
     .then(function(zpid) {
       zApi
